@@ -9,6 +9,7 @@
       "schedule:weekends", // Reduce near-constant PR spam
       ":disableRateLimiting",
       "github>stevewm/renovate-config:automerge-github-actions.json5",
+      "github>stevewm/renovate-config:automerge-pre-commit.json5",
       "github>stevewm/renovate-config:commit-messages.json5",
       "github>stevewm/renovate-config:semantic-commits.json5",
       "github>stevewm/renovate-config:custom-managers.json5"
