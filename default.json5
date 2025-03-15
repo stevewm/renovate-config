@@ -8,7 +8,8 @@
     "docker:pinDigests",
     ":enablePreCommit",
     "schedule:weekends", // Reduce near-constant PR spam
-    //"github>stevewm/renovate-config:automerge-github-actions.json5",
+    "helpers:pinGitHubActionDigests",
+    "github>stevewm/renovate-config:automerge-github-actions.json5",
     "github>stevewm/renovate-config:automerge-pre-commit.json5",
     "github>stevewm/renovate-config:commit-messages.json5",
     "github>stevewm/renovate-config:semantic-commits.json5",

@@ -5,6 +5,11 @@
       description: "Auto merge GitHub Actions",
       matchManagers: ["github-actions"],
       matchUpdateTypes: ["minor", "patch"],
+      "matchPackageNames": [
+        "actions/*",
+        "renovatebot/github-action",
+        "bjw-s/*"
+        ],
       automerge: true,
       automergeType: "branch",
       ignoreTests: true,
