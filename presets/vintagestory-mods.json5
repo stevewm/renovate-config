@@ -1,0 +1,37 @@
+// Custom Manager, datasource and rules for Vintage Story mods
+// This file is used to process Vintage Story mods in a mods.yaml file
+// See: https://github.com/stevewm/homelab/blob/main/kubernetes/apps/games/vintagestory/app/config/init/mods.yaml
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customDatasources: {
+    "vs-mods": {
+      defaultRegistryUrlTemplate: "https://mods.vintagestory.at/api/mod/{{packageName}}",
+      format: "json",
+      transformTemplates: [
+        '{"releases":[{"version": mod.releases[0].modversion, "releaseTimestamp": mod.releases[0].created}], "sourceUrl": "https://mods.vintagestory.at/" & mod.urlalias & "#tab-files"}'
+        ],
+    },
+  },
+  "customManagers": [
+    {
+      customType: "regex",
+      description: "Process Vintage Story mods",
+      fileMatch: ["(^|/)vintagestory(-\\w+)?/.*/mods\\.yaml$"],
+      matchStrings: [
+        "- id: (?<packageName>\\S+)\\n(?<indentation>\\s+)version: (?<currentValue>\\S+)"
+      ],
+      autoReplaceStringTemplate: "- id: {{{packageName}}}\n{{{indentation}}}version: {{{newValue}}}",
+      datasourceTemplate: "custom.vs-mods",
+      versioningTemplate: "semver-coerced"
+    },
+  ],
+  packageRules: [
+    {
+      matchDatasources: ["custom.vs-mods"],
+      matchManagers: ["regex"],
+      semanticCommitScope: "vintage-story",
+      commitMessageTopic: "mod {{depName}}",
+      commitMessageExtra: "( {{currentVersion}} → {{newVersion}} )",
+    },
+  ],
+}

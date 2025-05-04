@@ -1,0 +1,14 @@
+// Custom datasource for Vintage Story game versions
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customDatasources: {
+    vintagestory: {
+      // Valid: stable.json, pre.json, unstable.json
+      defaultRegistryUrlTemplate: "https://api.vintagestory.at/stable.json",
+      format: "json",
+      transformTemplates: [
+        '$map($keys($), function($key) {{"version": $key}})',
+      ],
+    },
+  },
+}

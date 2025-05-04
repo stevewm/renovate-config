@@ -27,5 +27,6 @@ repos:
       - id: renovate-config-validator
         files: |
           (?x)^(
-            .*.json.*|
+            default\.json5?$|
+            presets/.*\.json5?$
           )$
