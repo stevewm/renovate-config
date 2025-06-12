@@ -5,7 +5,7 @@
     ":dependencyDashboard",
     ":disableRateLimiting",
     "docker:enableMajor",
-    "docker:pinDigests",
+    //"docker:pinDigests",
     ":enablePreCommit",
     "schedule:weekends", // Reduce near-constant PR spam
     "helpers:pinGitHubActionDigests",
