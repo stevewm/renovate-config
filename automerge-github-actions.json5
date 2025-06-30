@@ -8,6 +8,7 @@
       "matchPackageNames": [
         "/^actions\//",
         "/^bjw-s-labs\//",
+        "/^github\//",
         "renovatebot\/github-action",
         ],
       automerge: true,
