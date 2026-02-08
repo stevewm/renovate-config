@@ -9,7 +9,7 @@
       automergeType: "branch",
       ignoreTests: true,
       "matchPackageNames": [
-        "/^stevewm\//",
+        "/^ghcr.io/stevewm\//",
         ],
     },
   ],
