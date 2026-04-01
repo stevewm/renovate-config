@@ -4,4 +4,4 @@ _.path = ['{{config_root}}/node_modules/.bin']
 [tools]
 "aqua:pkl" = "0.31.1"
 hk = "1.35.0"
-"npm:renovate" = "43.60.5"
+"npm:renovate" = "43.101.2"
