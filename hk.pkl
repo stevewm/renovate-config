@@ -3,9 +3,12 @@ import "package://github.com/jdx/hk/releases/download/v1.35.0/hk@1.35.0#/Builtin
 
 local linters = new Mapping<String, Step> {
     ["renovate-config"] {
-        glob = List("*.json5")
+        glob = List("*.json5", "renovate.json")
         check = "renovate-config-validator {{ files }}"
     }
+    ["newlines"] = Builtins.newlines
+    ["prettier"] = Builtins.prettier
+    ["mise"] = Builtins.mise
 }
 
 hooks {

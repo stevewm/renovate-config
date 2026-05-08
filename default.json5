@@ -12,6 +12,7 @@
     "github>stevewm/renovate-config:automerge-github-actions.json5",
     "github>stevewm/renovate-config:automerge-stevewm.json5",
     "github>stevewm/renovate-config:commit-messages.json5",
+    "github>stevewm/renovate-config:delay-github-actions.json5",
     "github>stevewm/renovate-config:semantic-commits.json5",
     "github>stevewm/renovate-config:custom-managers.json5",
     "github>stevewm/renovate-config:hk.json5",
