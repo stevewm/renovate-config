@@ -1,5 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Delay raising PRs for GitHub Actions by 5 days",
   packageRules: [
     {
       matchManagers: ["github-actions"],
