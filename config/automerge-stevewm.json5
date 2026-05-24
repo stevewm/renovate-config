@@ -2,11 +2,13 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   packageRules: [
     {
-      matchDatasources: ["docker"],
+      description: "Auto merge own stuff",
+      matchManagers: ["docker"],
+      matchUpdateTypes: ["minor", "patch", "digest"],
       automerge: true,
       automergeType: "branch",
-      matchUpdateTypes: ["digest"],
       ignoreTests: true,
+      matchPackageNames: ["ghcr.io/stevewm"],
     },
   ],
 }

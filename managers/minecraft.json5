@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Custom data source for Minecraft versions",
+  customDatasources: {
+    minecraft: {
+      defaultRegistryUrlTemplate: "https://launchermeta.mojang.com/mc/game/version_manifest_v2.json",
+      format: "json",
+      transformTemplates: [
+        '{ "releases": versions[type="release"].{"version": id, "releaseTimestamp": releaseTime} }',
+      ],
+    },
+  },
+}

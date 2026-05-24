@@ -1,5 +1,11 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  timezone: "Europe/Amsterdam",
+  dependencyDashboardTitle: "Renovate Dashboard",
+  suppressNotifications: ["prIgnoreNotification"],
+  commitBodyTable: true,
+  rebaseWhen: "auto",
+  platformCommit: "enabled",
   extends: [
     "config:recommended",
     ":dependencyDashboard",
@@ -9,18 +15,23 @@
     ":enablePreCommit",
     "schedule:weekends", // Reduce PR spam
     "helpers:pinGitHubActionDigests",
-    "github>stevewm/renovate-config:automerge-github-actions.json5",
-    "github>stevewm/renovate-config:automerge-stevewm.json5",
-    "github>stevewm/renovate-config:commit-messages.json5",
-    "github>stevewm/renovate-config:delay-github-actions.json5",
-    "github>stevewm/renovate-config:semantic-commits.json5",
-    "github>stevewm/renovate-config:custom-managers.json5",
-    "github>stevewm/renovate-config:hk.json5",
+    // home-operations configuration
+    "github>home-operations/renovate-presets//managers/annotated.json5",
+    "github>home-operations/renovate-presets//managers/grafanaDashboards.json5",
+    "github>home-operations/renovate-presets//managers/oci.json5",
+    "github>home-operations/renovate-presets//overrides/helmfile.json5",
+    "github>home-operations/renovate-presets//overrides/mise.json5",
+    "github>home-operations/renovate-presets//overrides/renovateOperator.json5",
+    "github>home-operations/renovate-presets//policies/semanticCommits.json5",
+    // my configuration
+    // custom managers
+    "github>stevewm/renovate-config//managers/github-url.json5",
+    "github>stevewm/renovate-config//managers/hk.json5",
+    "github>stevewm/renovate-config//managers/vintagestory.json5",
+    "github>stevewm/renovate-config//managers/minecraft.json5",
+    // other config
+    "github>stevewm/renovate-config//config/automerge-github-actions.json5",
+    "github>stevewm/renovate-config//config/automerge-stevewm.json5",
+    "github>stevewm/renovate-config//config/delay-github-actions.json5",
   ],
-  timezone: "Europe/Amsterdam",
-  dependencyDashboardTitle: "Renovate Dashboard",
-  suppressNotifications: ["prIgnoreNotification"],
-  commitBodyTable: true,
-  rebaseWhen: "auto",
-  platformCommit: "enabled",
 }

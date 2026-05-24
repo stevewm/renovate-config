@@ -1,0 +1,16 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Process raw GitHub URLs",
+  customManagers: [
+    {
+      customType: "regex",
+      description: "Process raw GitHub URLs",
+      fileMatch: ["/\\.env$/", "/\\.sh$/", "/\\.ya?ml(\\.j2)?$/"],
+      matchStrings: [
+        // https://raw.githubusercontent.com/external-secrets/external-secrets/v0.9.11/docs/snippets/dashboard.json
+        "https:\\/\\/raw.githubusercontent.com\\/(?<depName>\\S+?\\/\\S+?)\\/(?<currentValue>(v|\\d)\\S+?)\\/\\S+",
+      ],
+      datasourceTemplate: "github-releases",
+    },
+  ],
+}
