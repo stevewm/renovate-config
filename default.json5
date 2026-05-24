@@ -31,7 +31,6 @@
     "github>stevewm/renovate-config//managers/minecraft.json5",
     // other config
     "github>stevewm/renovate-config//config/automerge-github-actions.json5",
-    "github>stevewm/renovate-config//config/automerge-stevewm.json5",
     "github>stevewm/renovate-config//config/delay-github-actions.json5",
   ],
 }
