@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Override changelog URLs for specific packages",
+  packageRules: [
+    {
+      description: "Point Jellyfin at its upstream changelog",
+      matchPackageNames: ["ghcr.io/jellyfin/jellyfin"],
+      changelogUrl: "https://github.com/jellyfin/jellyfin/releases/tag/v{{newVersion}}",
+    },
+  ],
+}

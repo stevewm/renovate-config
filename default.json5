@@ -15,20 +15,29 @@
     ":enablePreCommit",
     "schedule:weekends", // Reduce PR spam
     "helpers:pinGitHubActionDigests",
+
     // home-operations configuration
     "github>home-operations/renovate-presets//managers/annotated.json5",
     "github>home-operations/renovate-presets//managers/grafanaDashboards.json5",
     "github>home-operations/renovate-presets//managers/oci.json5",
+
+    "github>home-operations/renovate-presets//overrides/changelogs.json5",
     "github>home-operations/renovate-presets//overrides/helmfile.json5",
     "github>home-operations/renovate-presets//overrides/mise.json5",
     "github>home-operations/renovate-presets//overrides/renovateOperator.json5",
+
     "github>home-operations/renovate-presets//policies/semanticCommits.json5",
+
     // my configuration
     // custom managers
     "github>stevewm/renovate-config//managers/github-url.json5",
     "github>stevewm/renovate-config//managers/hk.json5",
     "github>stevewm/renovate-config//managers/vintagestory.json5",
     "github>stevewm/renovate-config//managers/minecraft.json5",
+
+    // custom overrides
+    "github>stevewm/renovate-config//overrides/changelogs.json5",
+
     // other config
     "github>stevewm/renovate-config//config/automerge-github-actions.json5",
     "github>stevewm/renovate-config//config/delay-github-actions.json5",
