@@ -9,6 +9,8 @@ local linters = new Mapping<String, Step> {
     ["newlines"] = Builtins.newlines
     ["prettier"] = Builtins.prettier
     ["mise"] = Builtins.mise
+    ["jq"] = Builtins.jq
+
 }
 
 hooks {

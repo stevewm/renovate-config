@@ -6,6 +6,7 @@
   commitBodyTable: true,
   rebaseWhen: "auto",
   platformCommit: "enabled",
+  prFooter: "",
   extends: [
     "config:recommended",
     ":dependencyDashboard",
@@ -15,7 +16,6 @@
     //"docker:pinDigests",
     "schedule:weekends", // Reduce PR spam
     "helpers:pinGitHubActionDigests",
-    "prFooter": "",
 
     // home-operations configuration
     "github>home-operations/renovate-presets//managers/annotated.json5",
