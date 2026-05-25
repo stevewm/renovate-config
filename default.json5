@@ -12,9 +12,9 @@
     ":disableRateLimiting",
     "docker:enableMajor",
     //"docker:pinDigests",
-    ":enablePreCommit",
     "schedule:weekends", // Reduce PR spam
     "helpers:pinGitHubActionDigests",
+    "prFooter": "",
 
     // home-operations configuration
     "github>home-operations/renovate-presets//managers/annotated.json5",
