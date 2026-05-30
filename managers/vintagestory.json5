@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "Updates Vintage Story mods",
+  description: "Updates Vintage Story game and mod versions",
   customDatasources: {
     "vintagestory-mod": {
       defaultRegistryUrlTemplate: "https://mods.vintagestory.at/api/mod/{{packageName}}",
