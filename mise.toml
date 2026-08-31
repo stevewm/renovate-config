@@ -2,7 +2,7 @@
 _.path = ['{{config_root}}/node_modules/.bin']
 
 [tools]
-"aqua:pkl" = "0.31.1"
+"aqua:pkl" = "0.32.1"
 hk = "1.57.0"
 jq = "1.8.1"
 "npm:renovate" = "43.220.0"
