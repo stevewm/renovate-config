@@ -3,7 +3,7 @@ _.path = ['{{config_root}}/node_modules/.bin']
 
 [tools]
 "aqua:pkl" = "0.31.1"
-hk = "1.57.0"
+hk = "1.58.1"
 jq = "1.8.1"
 "npm:renovate" = "43.220.0"
 prettier = "3.8.4"
