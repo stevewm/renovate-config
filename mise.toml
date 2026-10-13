@@ -6,4 +6,4 @@ _.path = ['{{config_root}}/node_modules/.bin']
 hk = "2.5.0"
 jq = "1.8.1"
 "npm:renovate" = "44.155.2"
-prettier = "3.8.4"
+prettier = "3.9.10"
