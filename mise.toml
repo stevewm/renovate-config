@@ -5,5 +5,5 @@ _.path = ['{{config_root}}/node_modules/.bin']
 "aqua:pkl" = "0.32.1"
 hk = "2.5.0"
 jq = "1.8.1"
-"npm:renovate" = "44.155.2"
+"npm:renovate" = "44.166.0"
 prettier = "3.8.4"
